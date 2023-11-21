@@ -14,6 +14,14 @@ const userSchema  = new  Schema({
     img: {
         type: String
     },
+    role: {
+        type: String,
+        default: 'USER'
+    },
+    token:{
+        type: String,
+        default: ''
+    },
 }, {timestamps: true})
 
 const User = mongoose.model('User', userSchema)
